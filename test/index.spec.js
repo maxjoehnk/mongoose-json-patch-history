@@ -98,13 +98,16 @@ describe('mongoose-json-patch-history', function () {
                     }]
             });
         });
-        it('should call the next function', function () {
+        it('should call the next function', function (done) {
             var promise = Promise.resolve();
             model.create.returns(promise);
             schema.pre.yieldsOn(document, next);
             plugin(schema, options);
             return promise.then(function () {
-                expect(next).to.have.been.calledOnce;
+                setTimeout(function () {
+                    expect(next).to.have.been.calledOnce;
+                    done();
+                });
             });
         });
     });
