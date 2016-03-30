@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "es5"
+  },
+  "exclude": [
+    "node_modules"
+  ],
+  "files": [
+    "lib/index.ts",
+    "test/index.spec.ts",
+    "typings/tsd.d.ts"
+  ]
+}

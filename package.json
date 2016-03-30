@@ -1,0 +1,38 @@
+{
+  "name": "mongoose-json-patch-history",
+  "version": "1.0.0",
+  "description": "",
+  "main": "lib",
+  "dependencies": {
+    "fast-json-patch": "^0.5.6",
+    "q": "^1.4.1"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "chai-as-promised": "^5.3.0",
+    "sinon": "^1.17.3",
+    "sinon-chai": "^2.8.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maxjoehnk/mongoose-json-patch-history.git"
+  },
+  "keywords": [
+    "mongoose",
+    "jsonpatch",
+    "json-patch",
+    "history",
+    "log",
+    "mongodb",
+    "mongo"
+  ],
+  "author": "Max Joehnk",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/maxjoehnk/mongoose-json-patch-history/issues"
+  },
+  "homepage": "https://github.com/maxjoehnk/mongoose-json-patch-history#readme"
+}

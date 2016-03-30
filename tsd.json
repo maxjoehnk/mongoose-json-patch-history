@@ -1,0 +1,36 @@
+{
+  "version": "v4",
+  "repo": "borisyankov/DefinitelyTyped",
+  "ref": "master",
+  "path": "typings",
+  "bundle": "typings/tsd.d.ts",
+  "installed": {
+    "mongoose/mongoose.d.ts": {
+      "commit": "80057d687aefa736511e434cd2a6c0e9a6bb02bc"
+    },
+    "node/node.d.ts": {
+      "commit": "80057d687aefa736511e434cd2a6c0e9a6bb02bc"
+    },
+    "mocha/mocha.d.ts": {
+      "commit": "dbb2d9f1f1f0e50a3530dcfc02944f492be246dd"
+    },
+    "chai-as-promised/chai-as-promised.d.ts": {
+      "commit": "dbb2d9f1f1f0e50a3530dcfc02944f492be246dd"
+    },
+    "chai/chai.d.ts": {
+      "commit": "dbb2d9f1f1f0e50a3530dcfc02944f492be246dd"
+    },
+    "promises-a-plus/promises-a-plus.d.ts": {
+      "commit": "dbb2d9f1f1f0e50a3530dcfc02944f492be246dd"
+    },
+    "assertion-error/assertion-error.d.ts": {
+      "commit": "dbb2d9f1f1f0e50a3530dcfc02944f492be246dd"
+    },
+    "sinon-chai/sinon-chai.d.ts": {
+      "commit": "dbb2d9f1f1f0e50a3530dcfc02944f492be246dd"
+    },
+    "sinon/sinon.d.ts": {
+      "commit": "dbb2d9f1f1f0e50a3530dcfc02944f492be246dd"
+    }
+  }
+}
