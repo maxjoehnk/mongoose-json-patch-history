@@ -1,6 +1,6 @@
 {
   "name": "mongoose-json-patch-history",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A Mongoose Plugin which stores changes in json-patch format",
   "main": "lib",
   "dependencies": {
