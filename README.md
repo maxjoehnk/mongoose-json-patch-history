@@ -22,20 +22,20 @@ schema.use(history);
 
 ## API
 ### document#history()
-#### store(): Promise<IHistory>
+#### store(): Promise\<IHistory>
 Stores a new history entry.
 Note: This gets called on pre save hook
 
-#### retrieve(): Promise<IHistory[]>
+#### retrieve(): Promise\<IHistory[]>
 Returns all history entries for this document
 
-#### clear(): Promise<>
+#### clear(): Promise\<>
 Clears the History of this document
 
 ### document#patch(patches: [], save?: boolean)
 Applies the patches and saves the modified document.
 
-### document#$history: mongoose.Model<IHistory>
+### document#$history: mongoose.Model\<IHistory>
 The History Collection for the current model
 
 ## Options
