@@ -63,14 +63,16 @@ describe('mongoose-json-patch-history', function () {
     describe('pre save hook', function () {
         var document;
         var next;
+        var obj;
         beforeEach(function () {
+            obj = {
+                title: 'stub'
+            };
             document = {
                 id: 'stubid',
                 $history: model,
                 isNew: true,
-                _doc: {
-                    title: 'stub'
-                }
+                toObject: sinon.stub().returns(obj)
             };
             next = sinon.stub();
         });
@@ -109,11 +111,7 @@ describe('mongoose-json-patch-history', function () {
         beforeEach(function () {
             document = {
                 id: 'stubid',
-                $history: model,
-                isNew: true,
-                _doc: {
-                    title: 'stub'
-                }
+                $history: model
             };
         });
         it('should be registered', function () {

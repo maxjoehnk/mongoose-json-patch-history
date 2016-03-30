@@ -32,7 +32,10 @@ function plugin(schema: mongoose.Schema, options: Options) {
     let database: mongoose.Mongoose = options.database || mongoose;
 
     schema.post('init', function() {
-        this.$original = this.toObject();
+        this.$original = this.toObject({
+            depopulate: true,
+            virtuals: false
+        });
     });
     schema.pre('save', function(next) {
         var document: IHistoryDocument = this;
@@ -60,9 +63,15 @@ function plugin(schema: mongoose.Schema, options: Options) {
         let document = this;
 
         if (document.isNew) {
-            patches = jsonpatch.compare({}, document._doc);
+            patches = jsonpatch.compare({}, document.toObject({
+                depopulate: true,
+                virtuals: false
+            }));
         }else {
-            patches = jsonpatch.compare(document.$original, document._doc);
+            patches = jsonpatch.compare(document.$original, document.toObject({
+                depopulate: true,
+                virtuals: false
+            }));
         }
         return this
             .$history
@@ -71,7 +80,10 @@ function plugin(schema: mongoose.Schema, options: Options) {
                 patches: patches
             })
             .then((history: IHistory) => {
-                document.$original = document._doc;
+                document.$original = document.toObject({
+                    depopulate: true,
+                    virtuals: false
+                });
                 return history;
             });
     }
