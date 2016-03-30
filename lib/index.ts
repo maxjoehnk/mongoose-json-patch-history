@@ -29,7 +29,7 @@ interface IHistoryDocument extends mongoose.Document {
 
 function plugin(schema: mongoose.Schema, options: Options) {
     options = options || {};
-    let database = options.database || mongoose;
+    let database: mongoose.Mongoose = options.database || mongoose;
 
     schema.post('init', function(next) {
         this.$original = this.toObject();
