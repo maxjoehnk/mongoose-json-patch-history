@@ -24,7 +24,7 @@ interface Options {
 interface IHistoryDocument extends mongoose.Document {
     history(): any;
     $history: mongoose.Model<IHistory>;
-    $observer: any;
+    $original: any;
 }
 
 function plugin(schema: mongoose.Schema, options: Options) {
