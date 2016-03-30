@@ -2,7 +2,6 @@ import chai         = require('chai');
 import sinon        = require('sinon');
 import sinonChai    = require('sinon-chai');
 import asPromised   = require('chai-as-promised');
-import Q            = require('q');
 
 import plugin       = require('../lib');
 
