@@ -57,17 +57,23 @@ function plugin(schema: mongoose.Schema, options: Options) {
     }
 
     function store() {
-        var patches;
-        if (this.isNew) {
-            patches = jsonpatch.compare({}, this._doc);
+        let patches;
+        let document = this;
+
+        if (document.isNew) {
+            patches = jsonpatch.compare({}, document._doc);
         }else {
-            patches = jsonpatch.compare(this.$original, this._doc);
+            patches = jsonpatch.compare(document.$original, document._doc);
         }
         return this
             .$history
             .create({
                 ref: this.id,
                 patches: patches
+            })
+            .then((history: IHistory) => {
+                document.$original = document._doc;
+                return history;
             });
     }
 
