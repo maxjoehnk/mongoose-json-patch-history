@@ -31,9 +31,8 @@ function plugin(schema: mongoose.Schema, options: Options) {
     options = options || {};
     let database: mongoose.Mongoose = options.database || mongoose;
 
-    schema.post('init', function(next) {
+    schema.post('init', function() {
         this.$original = this.toObject();
-        next();
     });
     schema.pre('save', function(next) {
         var document: IHistoryDocument = this;

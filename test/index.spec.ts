@@ -46,13 +46,11 @@ describe('mongoose-json-patch-history', function () {
 
     describe('post init hook', function() {
         let document;
-        let next;
 
         beforeEach(function() {
             document = {
                 toObject: sinon.stub()
             };
-            next = sinon.stub();
         });
 
         it('should be added', function() {
@@ -66,16 +64,10 @@ describe('mongoose-json-patch-history', function () {
             };
             document.name = 'test';
             document.toObject.returns(obj);
-            schema.post.yieldsOn(document, next);
+            schema.post.yieldsOn(document);
             plugin(schema, options);
             expect(document.toObject).to.have.been.calledOnce;
             expect(document.$original).to.deep.equal(obj);
-        });
-
-        it('should call the next function', function() {
-            schema.post.yieldsOn(document, next);
-            plugin(schema, options);
-            expect(next).to.have.been.calledOnce;
         });
     });
 
