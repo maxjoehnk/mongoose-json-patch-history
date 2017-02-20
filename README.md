@@ -1,5 +1,7 @@
 # mongoose-json-patch-history
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/maxjoehnk/mongoose-json-patch-history.svg)](https://greenkeeper.io/)
+
 This plugin saves a history of all changes in the json-patch format
 
 ## Installation
