@@ -5,7 +5,8 @@
   "main": "lib",
   "dependencies": {
     "fast-json-patch": "^0.5.6",
-    "mongoose": "^4.4.10"
+    "mongoose": "^4.4.10",
+    "snyk": "^1.41.1"
   },
   "devDependencies": {
     "chai": "^3.5.0",
@@ -14,7 +15,9 @@
     "sinon-chai": "^2.8.0"
   },
   "scripts": {
-    "test": "mocha test/index.spec.js"
+    "test": "mocha test/index.spec.js",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -34,5 +37,6 @@
   "bugs": {
     "url": "https://github.com/maxjoehnk/mongoose-json-patch-history/issues"
   },
-  "homepage": "https://github.com/maxjoehnk/mongoose-json-patch-history#readme"
+  "homepage": "https://github.com/maxjoehnk/mongoose-json-patch-history#readme",
+  "snyk": true
 }
